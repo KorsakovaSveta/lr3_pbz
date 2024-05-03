@@ -1,0 +1,701 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/acer/ontologies/2024/2/untitled-ontology-7"
+         xmlns="http://www.semanticweb.org/acer/ontologies/2024/2/untitled-ontology-7#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/acer/ontologies/2024/2/untitled-ontology-7"/>
+
+<owl:ObjectProperty rdf:about="#вызывать">
+  <rdfs:domain rdf:resource="#продукты_питания"/>
+  <rdfs:range rdf:resource="#аллергические_заболевания"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#классификация">
+  <rdfs:domain rdf:resource="#опорно-двигательная_система"/>
+  <rdfs:range rdf:resource="#опорно-двигательная_система"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#осложнение">
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <rdfs:range rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:range rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#поражаемая_структура">
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+  <rdfs:range rdf:resource="#опорно-двигательная_система"/>
+  <rdfs:range rdf:resource="#сердце"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#поражаемая_ткань">
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+  <rdfs:domain rdf:resource="#заболевания_нижних_дыхательных_путей"/>
+  <rdfs:range rdf:resource="#нижние_дыхательные_пути"/>
+  <rdfs:range rdf:resource="#сердце"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#поражаемые_сосуды">
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+  <rdfs:range rdf:resource="#сосуды"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#поражаемый_орган">
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <rdfs:domain rdf:resource="#заболевания_нижних_дыхательных_путей"/>
+  <rdfs:domain rdf:resource="#заболевания_покровной_системы"/>
+  <rdfs:range rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdfs:range rdf:resource="#нижние_дыхательные_пути"/>
+  <rdfs:range rdf:resource="#опорно-двигательная_система"/>
+  <rdfs:range rdf:resource="#покровная_система"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#последствие">
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <rdfs:range rdf:resource="#аутоиммунные_заболевания"/>
+  <rdfs:range rdf:resource="#заболевания_печени"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#пример">
+  <rdfs:domain rdf:resource="#опорно-двигательная_система"/>
+  <rdfs:range rdf:resource="#опорно-двигательная_система"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#разновидность">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <rdfs:range rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:range rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#степень">
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <rdfs:range rdf:resource="#натуральные_числа"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#строение">
+  <rdfs:domain rdf:resource="#нижние_дыхательные_пути"/>
+  <rdfs:range rdf:resource="#нижние_дыхательные_пути"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#форма">
+  <rdfs:domain rdf:resource="#аллергические_заболевания"/>
+  <rdfs:range rdf:resource="#аллергические_заболевания"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#симптом">
+  <rdfs:domain rdf:resource="#аллергические_заболевания"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <rdfs:domain rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+</owl:DatatypeProperty>
+
+<owl:AnnotationProperty rdf:about="#включение">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+
+<owl:Class rdf:about="#продукты_питания">
+  <rdfs:subClassOf rdf:resource="#аллергические_заболевания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#аллергические_заболевания">
+  <rdfs:subClassOf rdf:resource="#заболевания_иммунной_системы"/>
+</owl:Class>
+
+<owl:Class rdf:about="#опорно-двигательная_система">
+  <rdfs:subClassOf rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <rdfs:subClassOf rdf:resource="#заболевания_опороно-двигательной_системы"/>
+  <rdfs:subClassOf rdf:resource="#система_органов"/>
+</owl:Class>
+
+<owl:Class rdf:about="#аутоиммунные_заболевания_желудочно-кишечного_тракта">
+  <rdfs:subClassOf rdf:resource="#аутоиммунные_заболевания"/>
+  <rdfs:subClassOf rdf:resource="#заболевания_желудочно-кишечного_тракта"/>
+</owl:Class>
+
+<owl:Class rdf:about="#аутоиммунные_заболевания_опорно-двигательного_аппарата">
+  <rdfs:subClassOf rdf:resource="#аутоиммунные_заболевания"/>
+  <rdfs:subClassOf rdf:resource="#заболевания_опороно-двигательной_системы"/>
+</owl:Class>
+
+<owl:Class rdf:about="#аутоиммунные_заболевания_сердечно-сосудистой_системы">
+  <rdfs:subClassOf rdf:resource="#аутоиммунные_заболевания"/>
+  <rdfs:subClassOf rdf:resource="#заболевания_сердечно-сосудистой_системы"/>
+</owl:Class>
+
+<owl:Class rdf:about="#сердце">
+  <rdfs:subClassOf rdf:resource="#сердечно-сосудистая_система"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_нижних_дыхательных_путей">
+  <rdfs:subClassOf rdf:resource="#заболевания_дыхательной_системы"/>
+</owl:Class>
+
+<owl:Class rdf:about="#нижние_дыхательные_пути">
+  <rdfs:subClassOf rdf:resource="#дыхательная_система"/>
+  <rdfs:subClassOf rdf:resource="#заболевания_нижних_дыхательных_путей"/>
+</owl:Class>
+
+<owl:Class rdf:about="#сосуды">
+  <rdfs:subClassOf rdf:resource="#сердечно-сосудистая_система"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_покровной_системы">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#желудочно-кишечный_тракт">
+  <rdfs:subClassOf rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:subClassOf rdf:resource="#заболевания_желудочно-кишечного_тракта"/>
+  <rdfs:subClassOf rdf:resource="#система_органов"/>
+</owl:Class>
+
+<owl:Class rdf:about="#покровная_система">
+  <rdfs:subClassOf rdf:resource="#заболевания_покровной_системы"/>
+  <rdfs:subClassOf rdf:resource="#система_органов"/>
+</owl:Class>
+
+<owl:Class rdf:about="#аутоиммунные_заболевания">
+  <rdfs:subClassOf rdf:resource="#первичный_иммунодефицит"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_печени">
+  <rdfs:subClassOf rdf:resource="#заболевания_желудочно-кишечного_тракта"/>
+</owl:Class>
+
+<owl:Class rdf:about="#натуральные_числа"/>
+
+<owl:Class rdf:about="#заболевания_иммунной_системы">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_опороно-двигательной_системы">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#система_органов">
+  <rdfs:subClassOf rdf:resource="#анатомические_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_желудочно-кишечного_тракта">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_сердечно-сосудистой_системы">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#сердечно-сосудистая_система">
+  <rdfs:subClassOf rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+  <rdfs:subClassOf rdf:resource="#заболевания_сердечно-сосудистой_системы"/>
+  <rdfs:subClassOf rdf:resource="#система_органов"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_дыхательной_системы">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#дыхательная_система">
+  <rdfs:subClassOf rdf:resource="#заболевания_дыхательной_системы"/>
+  <rdfs:subClassOf rdf:resource="#система_органов"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевание_анатомического_образования">
+  <rdfs:subClassOf rdf:resource="#болезнь"/>
+</owl:Class>
+
+<owl:Class rdf:about="#первичный_иммунодефицит">
+  <rdfs:subClassOf rdf:resource="#заболевания_иммунной_системы"/>
+</owl:Class>
+
+<owl:Class rdf:about="#анатомические_образования">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#болезнь"/>
+
+<owl:Class rdf:about="#астма">
+  <rdfs:subClassOf rdf:resource="#аллергические_заболевания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#безлактозные_продукты">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#верхние_дыхательные_пути">
+  <rdfs:subClassOf rdf:resource="#дыхательная_система"/>
+</owl:Class>
+
+<owl:Class rdf:about="#гастрит">
+  <rdfs:subClassOf rdf:resource="#заболевания_желудочно-кишечного_тракта"/>
+</owl:Class>
+
+<owl:Class rdf:about="#гепатит">
+  <rdfs:subClassOf rdf:resource="#заболевания_печени"/>
+</owl:Class>
+
+<owl:Class rdf:about="#глаз">
+  <rdfs:subClassOf rdf:resource="#орган"/>
+</owl:Class>
+
+<owl:Class rdf:about="#орган">
+  <rdfs:subClassOf rdf:resource="#анатомические_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#дерматит">
+  <rdfs:subClassOf rdf:resource="#заболевания_покровной_системы"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_зрительной_системы">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_нервной_системы">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#заболевания_половой_системы">
+  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#каши">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#коньюктивит">
+  <rdfs:subClassOf rdf:resource="#заболевания_зрительной_системы"/>
+</owl:Class>
+
+<owl:Class rdf:about="#кофе">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#миопия">
+  <rdfs:subClassOf rdf:resource="#заболевания_зрительной_системы"/>
+</owl:Class>
+
+<owl:Class rdf:about="#молочные_продукты">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#мясо">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#нервная_система">
+  <rdfs:subClassOf rdf:resource="#система_органов"/>
+</owl:Class>
+
+<owl:Class rdf:about="#овощи">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#скелет">
+  <rdfs:subClassOf rdf:resource="#опорно-двигательная_система"/>
+</owl:Class>
+
+<owl:Class rdf:about="#сладости">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#структуры">
+  <rdfs:subClassOf rdf:resource="#анатомические_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ткань">
+  <rdfs:subClassOf rdf:resource="#анатомические_образования"/>
+</owl:Class>
+
+<owl:Class rdf:about="#фастфуд">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#фрукты">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#хлеб">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#чай">
+  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+</owl:Class>
+
+<owl:Class rdf:about="#щитовидная_железа">
+  <rdfs:subClassOf rdf:resource="#орган"/>
+</owl:Class>
+
+<owl:Class rdf:about="#язва">
+  <rdfs:subClassOf rdf:resource="#заболевания_желудочно-кишечного_тракта"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#амфиартрозы">
+  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <пример rdf:resource="#межпозвоночные_суставы"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#межпозвоночные_суставы">
+  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#структуры"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#анкилозирующий_спондилоартрит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <поражаемая_структура rdf:resource="#межпозвоночные_суставы"/>
+  <степень rdf:resource="#1"/>
+  <степень rdf:resource="#2"/>
+  <степень rdf:resource="#3"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#1">
+  <rdf:type rdf:resource="#натуральные_числа"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#2">
+  <rdf:type rdf:resource="#натуральные_числа"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#3">
+  <rdf:type rdf:resource="#натуральные_числа"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#артерии">
+  <rdf:type rdf:resource="#сосуды"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#артериолы">
+  <rdf:type rdf:resource="#сосуды"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#аутоиммунная_кардиомиопатия">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+  <поражаемая_ткань rdf:resource="#миокард"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#миокард">
+  <rdf:type rdf:resource="#сердце"/>
+  <rdf:type rdf:resource="#ткань"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#аутоиммунный_атеросклероз">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+  <поражаемые_сосуды rdf:resource="#артерии"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#аутоиммунный_гепатит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <осложнение rdf:resource="#язвенный_колит"/>
+  <поражаемый_орган rdf:resource="#печень"/>
+  <симптом rdf:datatype="http://www.w3.org/2001/XMLSchema#string">высыпания на коже — сосудистые звездочки;
+жедтушность кожи;
+потемнение мочи;
+экзема</симптом>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#язвенный_колит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <осложнение rdf:resource="#ревматоидный_артрит"/>
+  <поражаемый_орган rdf:resource="#толстая_кишка"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#печень">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ревматоидный_артрит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <поражаемая_структура rdf:resource="#суставы"/>
+  <последствие rdf:resource="#синдром_Фелти"/>
+  <разновидность rdf:resource="#болезнь_Стилла"/>
+  <разновидность rdf:resource="#ювенильный_ревматоидный_артрит"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#толстая_кишка">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#суставы">
+  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#структуры"/>
+  <классификация rdf:resource="#амфиартрозы"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#синдром_Фелти">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#болезнь_Стилла">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <осложнение rdf:resource="#аутоиммунный_миокардит"/>
+  <поражаемая_структура rdf:resource="#суставы"/>
+  <симптом rdf:datatype="http://www.w3.org/2001/XMLSchema#string">лихорадка;
+температура тела выше 39°;
+артралгия;
+артрит;
+боль в горле</симптом>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ювенильный_ревматоидный_артрит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <поражаемая_структура rdf:resource="#суставы"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#аутоиммунный_миокардит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+  <поражаемая_ткань rdf:resource="#миокард"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#болезнь_Микулича">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#бронхи">
+  <rdf:type rdf:resource="#нижние_дыхательные_пути"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#бронхиолы">
+  <rdf:type rdf:resource="#нижние_дыхательные_пути"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#венулы">
+  <rdf:type rdf:resource="#сосуды"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#вены">
+  <rdf:type rdf:resource="#сосуды"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#гортань_ниже_голосовых_связок">
+  <rdf:type rdf:resource="#нижние_дыхательные_пути"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#двенадцатиперстная_кишка">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#желудок">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#желудочки">
+  <rdf:type rdf:resource="#орган"/>
+  <rdf:type rdf:resource="#сердце"/>
+  <rdf:type rdf:resource="#структуры"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#желудочно-кишечная_аллергия">
+  <rdf:type rdf:resource="#аллергические_заболевания"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#желчный_пузырь">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#капилляры">
+  <rdf:type rdf:resource="#сосуды"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#клапаны">
+  <rdf:type rdf:resource="#сердце"/>
+  <rdf:type rdf:resource="#структуры"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#кожа">
+  <rdf:type rdf:resource="#орган"/>
+  <rdf:type rdf:resource="#покровная_система"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#кожные_придатки">
+  <rdf:type rdf:resource="#орган"/>
+  <rdf:type rdf:resource="#покровная_система"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#кости">
+  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#кровь">
+  <rdf:type rdf:resource="#сердечно-сосудистая_система"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#лёгкие">
+  <rdf:type rdf:resource="#нижние_дыхательные_пути"/>
+  <rdf:type rdf:resource="#орган"/>
+  <строение rdf:resource="#плевра"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#плевра">
+  <rdf:type rdf:resource="#нижние_дыхательные_пути"/>
+  <rdf:type rdf:resource="#ткань"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#мышцы">
+  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#орехи">
+  <rdf:type rdf:resource="#продукты_питания"/>
+  <вызывать rdf:resource="#пищевая_аллергия"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#пищевая_аллергия">
+  <rdf:type rdf:resource="#аллергические_заболевания"/>
+  <форма rdf:resource="#желудочно-кишечная_аллергия"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#первичный_билиарный_холангит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <поражаемый_орган rdf:resource="#печень"/>
+  <последствие rdf:resource="#цироз_печени"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#цироз_печени">
+  <rdf:type rdf:resource="#заболевания_печени"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#первичный_желчный_холангит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_желудочно-кишечного_тракта"/>
+  <поражаемый_орган rdf:resource="#печень"/>
+  <разновидность rdf:resource="#первичный_билиарный_холангит"/>
+  <степень rdf:resource="#1"/>
+  <степень rdf:resource="#2"/>
+  <степень rdf:resource="#3"/>
+  <степень rdf:resource="#4"/>
+  <степень rdf:resource="#5"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#4">
+  <rdf:type rdf:resource="#натуральные_числа"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#5">
+  <rdf:type rdf:resource="#натуральные_числа"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#печенье">
+  <rdf:type rdf:resource="#продукты_питания"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#пищевод">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#поджелудочная_железа">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#подкожная_клетчатка">
+  <rdf:type rdf:resource="#покровная_система"/>
+  <rdf:type rdf:resource="#ткань"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#полимиозит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <поражаемый_орган rdf:resource="#мышцы"/>
+  <симптом rdf:datatype="http://www.w3.org/2001/XMLSchema#string">затруднение глотания</симптом>
+  <симптом rdf:datatype="http://www.w3.org/2001/XMLSchema#string">мышечная слабость</симптом>
+  <симптом rdf:datatype="http://www.w3.org/2001/XMLSchema#string">непроходящая усталость</симптом>
+  <симптом rdf:datatype="http://www.w3.org/2001/XMLSchema#string">удушье</симптом>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#предсердия">
+  <rdf:type rdf:resource="#сердце"/>
+  <rdf:type rdf:resource="#структуры"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#прямая_кишка">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#рыба">
+  <rdf:type rdf:resource="#продукты_питания"/>
+  <вызывать rdf:resource="#пищевая_аллергия"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#связки">
+  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#ткань"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#сигмовидная_кишка">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#синдром_Леффлера">
+  <rdf:type rdf:resource="#аллергические_заболевания"/>
+  <rdf:type rdf:resource="#заболевания_нижних_дыхательных_путей"/>
+  <поражаемый_орган rdf:resource="#лёгкие"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#синдром_Свита">
+  <rdf:type rdf:resource="#аллергические_заболевания"/>
+  <rdf:type rdf:resource="#заболевания_покровной_системы"/>
+  <поражаемый_орган rdf:resource="#кожа"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#слепая_кишка">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#слизистокожные_соединения">
+  <rdf:type rdf:resource="#орган"/>
+  <rdf:type rdf:resource="#покровная_система"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#сухожилия">
+  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#ткань"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#тонкая_кишка">
+  <rdf:type rdf:resource="#желудочно-кишечный_тракт"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#трахея">
+  <rdf:type rdf:resource="#нижние_дыхательные_пути"/>
+  <rdf:type rdf:resource="#орган"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#туберкулёз_плевры">
+  <rdf:type rdf:resource="#аллергические_заболевания"/>
+  <rdf:type rdf:resource="#заболевания_нижних_дыхательных_путей"/>
+  <поражаемая_ткань rdf:resource="#плевра"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#эндокардит_Либмана-Сакса">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+  <поражаемая_структура rdf:resource="#клапаны"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#яйца">
+  <rdf:type rdf:resource="#продукты_питания"/>
+  <вызывать rdf:resource="#пищевая_аллергия"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

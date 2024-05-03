@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Классы и подклассы</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="{{ url_for('static', filename='css/classes.css')}}" rel="stylesheet" />
+    <link type="text/css" href="{{ url_for('static', filename='css/index.css')}}" rel="stylesheet" />
+    <style>
+        button {
+            width: 198px;
+        }
+    </style>
+</head>
+<body>
+    
+  <form action="{{ url_for('add_individuals') }}" method="POST">
+      <label for="selected_class">Выберите класс:</label>
+      <select name="selected_class">
+          {% for cls in classes %}
+              <option value="{{ cls }}">{{ cls }}</option>
+          {% endfor %}
+      </select>
+      
+      <br>
+      
+      <label for="new_individual">Введите имя экземпляра:</label>
+      <input type="text" name="new_individual">
+      
+      <br>
+      
+      <input type="submit" value="Добавить экземпляр">
+      {% if error %}
+      <p class=error><strong>Error:</strong> {{ error }}
+      {% endif %}
+  </form>
+  
+    <textarea readonly>
+        {% for cls in class_and_individuals %}
+                {{ cls.name }}
+                {% if cls.individuals %}
+                        {% for individual in cls.individuals %}
+                            {{ individual }}
+                        {% endfor %}
+                {% endif %}
+        {% endfor %}
+    </textarea>
+    <div class="btn">
+        <button><a href="/display_individuals">Экземпляры классов</a></button>
+  <button><a href="/">Главная страница</a></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {  
+    background: url(background_2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border : 15px solid transparent;  
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #496ef5, #97d8f6) border-box;
+    border-radius: 20px;
+    padding : 5px;
+    margin : auto;
+    width: 680px;
+    display: block;
+    color: blue;
+    height: 280px;
+    margin-top: 10px;
+
+}
+
+button {
+    width: 195px;
+    text-align: center;
+    text-decoration: none;
+    height: 50px;
+    line-height: 40px;
+    margin: 10px 10px 10px 10px;
+    background: linear-gradient(90deg, #496ef5, #97d8f6);
+    border-radius: 20px;
+    border : 1px solid #ffffff;
+    
+  font-size: 15px;
+
+}
+a {
+    color: #ffffff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+.btn {
+    display: flex;
+    justify-content: center; 
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="{{ url_for('static', filename='css/classes.css')}}" rel="stylesheet" />
+    <link type="text/css" href="{{ url_for('static', filename='css/index.css')}}" rel="stylesheet" />
+    <title>OWL Ontology</title>
+</head>
+<body>
+
+    
+    <form action="{{ url_for('add_subclass') }}" method="POST">
+        <label for="selected_class">Выберите класс:</label>
+        <select name="selected_class">
+            {% for cls in classes %}
+                <option value="{{ cls }}">{{ cls }}</option>
+            {% endfor %}
+        </select>
+        
+        <br>
+        
+        <label for="new_class">Введите имя подкласса:</label>
+        <input type="text" name="new_class">
+        
+        <br>
+        
+        <input type="submit" value="Добавить подкласс">
+        {% if error %}
+        <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+    </form>
+
+    <textarea readonly>{% for cls in class_hierarchy %}
+            {{ cls.name }}
+            {% if cls.subclasses %}
+                    {% for sub_cls in cls.subclasses %}
+                        {{ sub_cls }}
+                    {% endfor %}
+            {% endif %}
+    {% endfor %}</textarea>
+    <div class="btn">
+    <button><a href="/display_classes">Иерархия классов</a></button>
+    <button><a href="/">Главная страница</a></button>
+</div>
+</body>
+</html>

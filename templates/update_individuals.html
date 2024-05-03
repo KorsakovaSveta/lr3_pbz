@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OWL Ontology</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/classes.css')}}" rel="stylesheet" />
+    <link type="text/css" href="{{ url_for('static', filename='css/index.css')}}" rel="stylesheet" />
+    <style>
+        button {
+            width: 180px;
+        }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('update_individuals_name') }}" method="POST">
+        <label for="selected_individual">Выберите экземпляр:</label>
+        <select name="selected_individual">
+            {% for ind in individuals %}
+                <option value="{{ ind }}">{{ ind }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="new_individual">Введите новое имя экземпляра:</label>
+        <input type="text" name="new_individual">
+        <br>
+        <input type="submit" value="Изменить имя экземпляра">
+        {% if error %}
+        <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+    </form>
+    <textarea readonly>
+        {% for ind in individuals_for_update %}
+                {{ ind }}
+        {% endfor %}
+    </textarea>
+    <div class="btn">
+        <button><a href="/display_individual_after_update">Экземпляры</a></button>
+        <button><a href="/">Главная страница</a></button>    
+    </div>
+
+</body>
+</html>
