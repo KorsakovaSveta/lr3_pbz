@@ -58,16 +58,6 @@ def index():
     # Рендерим HTML-шаблон и передаем списки сущностей и связей
     return render_template('index.html', entities=entities, relationships=relationships)
 
-# @app.route('/add_subclass')
-# def all_classes():
-#     classes = []
-#     # Получаем все классы
-#     for cls in onto.classes():
-#         classes.append(cls.name)
-    
-#     # Рендерим HTML-шаблон и передаем список классов
-#     return render_template('classes.html', classes=classes)
-
 # Маршрут Flask-приложения для обработки формы добавления подкласса
 @app.route('/add_subclass', methods=['POST', 'GET'])
 def add_subclass():
@@ -102,7 +92,6 @@ def add_subclass():
 def display_classes():
 
     class_hierarchy = []
-    # Iterate over classes and print their names and subclasses
     for cls in onto.classes():
         subclasses = []
         for subcls in cls.subclasses():
@@ -110,18 +99,7 @@ def display_classes():
         class_hierarchy.append({"name": cls.name, "subclasses": subclasses})
 
     return render_template('classes.html',classes=classes, class_hierarchy=class_hierarchy)
-    #return render_template('hierarchy.html', classes_and_subclasses=classes_and_subclasses)
-
-# @app.route('/add_individuals')
-# def all_classes_and_individuals():
-#     classes = []
-#     # Получаем все классы
-#     for cls in onto.classes():
-#         classes.append(cls.name)
     
-#     # Рендерим HTML-шаблон и передаем список классов
-#     return render_template('individuals.html', classes=classes)
-
 @app.route('/add_individuals', methods=['POST', 'GET'])
 def add_individuals():
 
@@ -140,12 +118,9 @@ def add_individuals():
                 return render_template('classes.html', error=error, classes=classes)  
         # Выбор класса, к которому нужно добавить новый класс
         selected_class = onto[selected_class_name]
-        
         # Создание нового класса
         with onto:
             new_individual = selected_class(new_individual_name)
-
-        
         # Сохранение изменений в онтологии
         onto.save("lr_2.owl")
 
@@ -157,25 +132,10 @@ def display_individuals():
     # Iterate over classes and print their names and subclasses
     for cls in onto.classes():
         class_individuals = [ind.name for ind  in cls.instances()]
-        subclasses = [subcls for subcls in cls.subclasses()]
-        for subcls in subclasses:
-            subclasses_individuals = [ind.name for ind in subcls.instances()]
-        for ind in class_individuals:
-            if ind not in subclasses_individuals:
-                individuals.append(ind)
-        class_and_individuals.append({"name": cls.name, "individuals": individuals})
-        individuals = []
+        
+        class_and_individuals.append({"name": cls.name, "individuals": class_individuals})
+        
     return render_template('individuals.html',classes=classes, class_and_individuals=class_and_individuals)
-
-# @app.route('/update_class_name')
-# def update_class():
-#     classes =[]
-#     # Получаем все классы
-#     for cls in onto.classes():
-#         classes.append(cls.name)
-    
-#     # Рендерим HTML-шаблон и передаем список классов
-#     return render_template('update.html', classes=classes)
 
 @app.route('/update_class_name', methods=['POST', 'GET'])
 def update_class_name():
@@ -213,7 +173,6 @@ def display_classes_after_update():
 def update_individuals_name():
 
     if request.method == 'POST':
-       
         # Получение данных из формы
         selected_individual_name = request.form['selected_individual']
         new_individual_name = request.form['new_individual']
@@ -227,7 +186,6 @@ def update_individuals_name():
                 return render_template('classes.html', error=error, classes=classes)  
         # Выбор класса, к которому нужно добавить новый класс
         selected_individual = onto[selected_individual_name]
-        
         selected_individual.name = new_individual_name
         onto.save("lr_2.owl")
     individuals = [ind.name for ind in onto.individuals()]

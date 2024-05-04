@@ -14,8 +14,8 @@
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#классификация">
-  <rdfs:domain rdf:resource="#опорно-двигательная_система"/>
-  <rdfs:range rdf:resource="#опорно-двигательная_система"/>
+  <rdfs:domain rdf:resource="#опорно-двигательный_аппарат"/>
+  <rdfs:range rdf:resource="#опорно-двигательный_аппарат"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#осложнение">
@@ -28,7 +28,7 @@
 <owl:ObjectProperty rdf:about="#поражаемая_структура">
   <rdfs:domain rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
   <rdfs:domain rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
-  <rdfs:range rdf:resource="#опорно-двигательная_система"/>
+  <rdfs:range rdf:resource="#опорно-двигательный_аппарат"/>
   <rdfs:range rdf:resource="#сердце"/>
 </owl:ObjectProperty>
 
@@ -51,7 +51,7 @@
   <rdfs:domain rdf:resource="#заболевания_покровной_системы"/>
   <rdfs:range rdf:resource="#желудочно-кишечный_тракт"/>
   <rdfs:range rdf:resource="#нижние_дыхательные_пути"/>
-  <rdfs:range rdf:resource="#опорно-двигательная_система"/>
+  <rdfs:range rdf:resource="#опорно-двигательный_аппарат"/>
   <rdfs:range rdf:resource="#покровная_система"/>
 </owl:ObjectProperty>
 
@@ -63,8 +63,8 @@
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#пример">
-  <rdfs:domain rdf:resource="#опорно-двигательная_система"/>
-  <rdfs:range rdf:resource="#опорно-двигательная_система"/>
+  <rdfs:domain rdf:resource="#опорно-двигательный_аппарат"/>
+  <rdfs:range rdf:resource="#опорно-двигательный_аппарат"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#разновидность">
@@ -110,7 +110,7 @@
   <rdfs:subClassOf rdf:resource="#заболевания_иммунной_системы"/>
 </owl:Class>
 
-<owl:Class rdf:about="#опорно-двигательная_система">
+<owl:Class rdf:about="#опорно-двигательный_аппарат">
   <rdfs:subClassOf rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
   <rdfs:subClassOf rdf:resource="#заболевания_опороно-двигательной_системы"/>
   <rdfs:subClassOf rdf:resource="#система_органов"/>
@@ -222,89 +222,28 @@
 
 <owl:Class rdf:about="#болезнь"/>
 
-<owl:Class rdf:about="#астма">
-  <rdfs:subClassOf rdf:resource="#аллергические_заболевания"/>
-</owl:Class>
-
-<owl:Class rdf:about="#безлактозные_продукты">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
-</owl:Class>
-
 <owl:Class rdf:about="#верхние_дыхательные_пути">
   <rdfs:subClassOf rdf:resource="#дыхательная_система"/>
-</owl:Class>
-
-<owl:Class rdf:about="#гастрит">
-  <rdfs:subClassOf rdf:resource="#заболевания_желудочно-кишечного_тракта"/>
-</owl:Class>
-
-<owl:Class rdf:about="#гепатит">
-  <rdfs:subClassOf rdf:resource="#заболевания_печени"/>
-</owl:Class>
-
-<owl:Class rdf:about="#глаз">
-  <rdfs:subClassOf rdf:resource="#орган"/>
-</owl:Class>
-
-<owl:Class rdf:about="#орган">
-  <rdfs:subClassOf rdf:resource="#анатомические_образования"/>
 </owl:Class>
 
 <owl:Class rdf:about="#дерматит">
   <rdfs:subClassOf rdf:resource="#заболевания_покровной_системы"/>
 </owl:Class>
 
-<owl:Class rdf:about="#заболевания_зрительной_системы">
-  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
-</owl:Class>
-
 <owl:Class rdf:about="#заболевания_нервной_системы">
   <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
-</owl:Class>
-
-<owl:Class rdf:about="#заболевания_половой_системы">
-  <rdfs:subClassOf rdf:resource="#заболевание_анатомического_образования"/>
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
-</owl:Class>
-
-<owl:Class rdf:about="#каши">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
-</owl:Class>
-
-<owl:Class rdf:about="#коньюктивит">
-  <rdfs:subClassOf rdf:resource="#заболевания_зрительной_системы"/>
-</owl:Class>
-
-<owl:Class rdf:about="#кофе">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
-</owl:Class>
-
-<owl:Class rdf:about="#миопия">
-  <rdfs:subClassOf rdf:resource="#заболевания_зрительной_системы"/>
-</owl:Class>
-
-<owl:Class rdf:about="#молочные_продукты">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
-</owl:Class>
-
-<owl:Class rdf:about="#мясо">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
 </owl:Class>
 
 <owl:Class rdf:about="#нервная_система">
   <rdfs:subClassOf rdf:resource="#система_органов"/>
 </owl:Class>
 
-<owl:Class rdf:about="#овощи">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+<owl:Class rdf:about="#орган">
+  <rdfs:subClassOf rdf:resource="#анатомические_образования"/>
 </owl:Class>
 
 <owl:Class rdf:about="#скелет">
-  <rdfs:subClassOf rdf:resource="#опорно-двигательная_система"/>
-</owl:Class>
-
-<owl:Class rdf:about="#сладости">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+  <rdfs:subClassOf rdf:resource="#опорно-двигательный_аппарат"/>
 </owl:Class>
 
 <owl:Class rdf:about="#структуры">
@@ -315,37 +254,25 @@
   <rdfs:subClassOf rdf:resource="#анатомические_образования"/>
 </owl:Class>
 
-<owl:Class rdf:about="#фастфуд">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
+<owl:Class rdf:about="#гепатит">
+  <rdfs:subClassOf rdf:resource="#заболевания_печени"/>
 </owl:Class>
 
-<owl:Class rdf:about="#фрукты">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
-</owl:Class>
-
-<owl:Class rdf:about="#хлеб">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
-</owl:Class>
-
-<owl:Class rdf:about="#чай">
-  <rdfs:subClassOf rdf:resource="#продукты_питания"/>
-</owl:Class>
-
-<owl:Class rdf:about="#щитовидная_железа">
-  <rdfs:subClassOf rdf:resource="#орган"/>
-</owl:Class>
-
-<owl:Class rdf:about="#язва">
+<owl:Class rdf:about="#гастрит">
   <rdfs:subClassOf rdf:resource="#заболевания_желудочно-кишечного_тракта"/>
 </owl:Class>
 
+<owl:Class rdf:about="#астма">
+  <rdfs:subClassOf rdf:resource="#аллергические_заболевания"/>
+</owl:Class>
+
 <owl:NamedIndividual rdf:about="#амфиартрозы">
-  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#опорно-двигательный_аппарат"/>
   <пример rdf:resource="#межпозвоночные_суставы"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#межпозвоночные_суставы">
-  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#опорно-двигательный_аппарат"/>
   <rdf:type rdf:resource="#структуры"/>
 </owl:NamedIndividual>
 
@@ -379,10 +306,10 @@
 
 <owl:NamedIndividual rdf:about="#аутоиммунная_кардиомиопатия">
   <rdf:type rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
-  <поражаемая_ткань rdf:resource="#миокард"/>
+  <поражаемая_ткань rdf:resource="#Миокард"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#миокард">
+<owl:NamedIndividual rdf:about="#Миокард">
   <rdf:type rdf:resource="#сердце"/>
   <rdf:type rdf:resource="#ткань"/>
 </owl:NamedIndividual>
@@ -426,13 +353,12 @@
   <rdf:type rdf:resource="#орган"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#суставы">
-  <rdf:type rdf:resource="#опорно-двигательная_система"/>
-  <rdf:type rdf:resource="#структуры"/>
-  <классификация rdf:resource="#амфиартрозы"/>
+<owl:NamedIndividual rdf:about="#аутоиммунный_миокардит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
+  <поражаемая_ткань rdf:resource="#Миокард"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#синдром_Фелти">
+<owl:NamedIndividual rdf:about="#болезнь_Микулича">
   <rdf:type rdf:resource="#аутоиммунные_заболевания"/>
 </owl:NamedIndividual>
 
@@ -447,18 +373,10 @@
 боль в горле</симптом>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#ювенильный_ревматоидный_артрит">
-  <rdf:type rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
-  <поражаемая_структура rdf:resource="#суставы"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#аутоиммунный_миокардит">
-  <rdf:type rdf:resource="#аутоиммунные_заболевания_сердечно-сосудистой_системы"/>
-  <поражаемая_ткань rdf:resource="#миокард"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#болезнь_Микулича">
-  <rdf:type rdf:resource="#аутоиммунные_заболевания"/>
+<owl:NamedIndividual rdf:about="#суставы">
+  <rdf:type rdf:resource="#опорно-двигательный_аппарат"/>
+  <rdf:type rdf:resource="#структуры"/>
+  <классификация rdf:resource="#амфиартрозы"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#бронхи">
@@ -528,7 +446,7 @@
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#кости">
-  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#опорно-двигательный_аппарат"/>
   <rdf:type rdf:resource="#орган"/>
 </owl:NamedIndividual>
 
@@ -548,7 +466,7 @@
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#мышцы">
-  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#опорно-двигательный_аппарат"/>
   <rdf:type rdf:resource="#орган"/>
 </owl:NamedIndividual>
 
@@ -629,13 +547,22 @@
   <rdf:type rdf:resource="#орган"/>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#синдром_Фелти">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ювенильный_ревматоидный_артрит">
+  <rdf:type rdf:resource="#аутоиммунные_заболевания_опорно-двигательного_аппарата"/>
+  <поражаемая_структура rdf:resource="#суставы"/>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#рыба">
   <rdf:type rdf:resource="#продукты_питания"/>
   <вызывать rdf:resource="#пищевая_аллергия"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#связки">
-  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#опорно-двигательный_аппарат"/>
   <rdf:type rdf:resource="#ткань"/>
 </owl:NamedIndividual>
 
@@ -667,7 +594,7 @@
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#сухожилия">
-  <rdf:type rdf:resource="#опорно-двигательная_система"/>
+  <rdf:type rdf:resource="#опорно-двигательный_аппарат"/>
   <rdf:type rdf:resource="#ткань"/>
 </owl:NamedIndividual>
 
@@ -695,6 +622,14 @@
 <owl:NamedIndividual rdf:about="#яйца">
   <rdf:type rdf:resource="#продукты_питания"/>
   <вызывать rdf:resource="#пищевая_аллергия"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#овощи">
+  <rdf:type rdf:resource="#продукты_питания"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#фрукты">
+  <rdf:type rdf:resource="#продукты_питания"/>
 </owl:NamedIndividual>
 
 
